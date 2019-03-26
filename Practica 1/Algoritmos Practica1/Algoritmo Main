@@ -1,0 +1,301 @@
+Inicio
+        Vehiculos miTanque = nuevo Tanque
+        Vehiculos miAvion = nuevo Avion
+        Escenario miEscena1 = nuevo Escena1
+        Escenario miEscena2 = nuevo Escena2
+        Escenario miEscena3 = nuevo Escena3
+        DatosEscena datos = nuevo DatosEscena
+        CrearEscena1 crear1 = nuevo CrearEscena1
+        CrearEscena2 crear2 = nuevo CrearEscena2
+        Enemigos LosEnemigos = nuevo LosEnemigos
+        ListadoVehiculos miListado = nuevo ListadoVehiculos
+        ReporteVehiculos miMejor = nuevo ReporteVehiculos
+        Tienda miArma1 = nuevo Arma1
+        Tienda miArma2 = nuevo Arma2
+        Tienda miArma3 = nuevo Arma3
+        var tecla = error
+        var nombre
+        var vehiculo
+        var opcion
+        Escribir ""
+        Escribir "INGRESA TU USUARIO: "
+        leer(nombre)
+        hace
+        Escribir "|||BIENVENIDO AL MENÚ DEL RPG " + nombre + "|||"
+        Escribir "1. JUGAR \n2. CREAR ESENARIO 1 \n3. CREAR ESCENARIO 2 \n4. VER ESENARIOS CREADOS \n5. TIENDA \n6. LISTADO DE VEHICULOS \n7. MEJOR VEHICULO \n8. PEOR VEHICULO \n9. REPORTE DE BATALLAS \n10. SALIR"
+        leer(opcion)
+        
+        cambio(opcion){
+            caso 1:
+                Escribir "¿CON QUE ESCENARIO QUIERES JUGAR?"
+                Escribir "1: JUGAR CON PREDETERMINADO 1 \n2: JUGAR CON PREDETERMINADO 2 \n3: JUGAR CON PREDETERMINADO 3 \n4: JUGAR CON PRIMER ESCENARIO CREADO \n5: JUGAR CON SEGUNDO ESCENARIO CREADO \n6: TERMINAR"
+                leer(opcion)
+                cambio(opcion){
+                    caso 1:
+                        mientras(HPJugador > 0)
+                            Escribir "ESCENARIO SELECCIONADO: "
+                            miEscena1.cambio_esenario
+                            Escribir "\n¿QUE VEHICULO QUIERES USAR " + nombre + "?"
+                            Escribir "1. TANQUE\n2. AVION"
+                            leer(vehiculo)
+                    
+                    cambio(vehiculo)
+                        caso 1:
+                            Escribir "|||USANDO TANQUE|||"
+                            Escribir "VIDA: " + LosEnemigos.HPJugador
+                            Escribir "PUNTOS DE PODER: " + miTanque.PP)
+                            Escribir "NIVEL: " + miTanque.nivel)
+                            miEscena1.cambio_esenario
+                            miTanque.batallaJugador
+                            descanso
+            
+                        caso 2: 
+                            Escribir "|||USANDO AVION|||"
+                            Escribir "VIDA: " + LosEnemigos.HPJugador
+                            Escribir "PUNTOS DE PODER: " + miAvion.PP)
+                            Escribir "NIVEL: " + miAvion.nivel)
+                            miEscena1.cambio_esenario
+                            miTanque.batallaJugador
+
+                            descanso
+            
+                        defecto:
+                            Escribir "SOLO PUEDES USAR TANQUE O AVION"
+                    
+                        LosEnemigos.batallaEnemigo
+        
+                
+                        Escribir "|||TE HAN MATADO, HAS PERDIDO|||"
+                        descanso
+                    caso 2:
+                        mientras(HPJugador > 0)
+                            Escribir "ESCENARIO SELECCIONADO: "
+                            miEscena2.cambio_esenario
+                            Escribir "\n¿QUE VEHICULO QUIERES USAR " + nombre + "?"
+                            Escribir "1. TANQUE\n2. AVION"
+                            leer(vehiculo)
+                    
+                    cambio(vehiculo)
+                        caso 1:
+                            Escribir "|||USANDO TANQUE|||"
+                            Escribir "VIDA: " + LosEnemigos.HPJugador
+                            Escribir "PUNTOS DE PODER: " + miTanque.PP)
+                            Escribir "NIVEL: " + miTanque.nivel)
+                            miEscena2.cambio_esenario
+                            miTanque.batallaJugador
+                            descanso
+            
+                        caso 2: 
+                            Escribir "|||USANDO AVION|||"
+                            Escribir "VIDA: " + LosEnemigos.HPJugador
+                            Escribir "PUNTOS DE PODER: " + miAvion.PP)
+                            Escribir "NIVEL: " + miAvion.nivel)
+                            miEscena1.cambio_esenario
+                            miTanque.batallaJugador
+
+                            descanso
+            
+                        defecto:
+                            Escribir "SOLO PUEDES USAR TANQUE O AVION"
+                    
+                        LosEnemigos.batallaEnemigo
+        
+                
+                        Escribir "|||TE HAN MATADO, HAS PERDIDO|||"
+                        descanso
+                    case 3:
+                       mientras(HPJugador > 0)
+                            Escribir "ESCENARIO SELECCIONADO: "
+                            miEscena3.cambio_esenario
+                            Escribir "\n¿QUE VEHICULO QUIERES USAR " + nombre + "?"
+                            Escribir "1. TANQUE\n2. AVION"
+                            leer(vehiculo)
+                    
+                    cambio(vehiculo)
+                        caso 1:
+                            Escribir "|||USANDO TANQUE|||"
+                            Escribir "VIDA: " + LosEnemigos.HPJugador
+                            Escribir "PUNTOS DE PODER: " + miTanque.PP)
+                            Escribir "NIVEL: " + miTanque.nivel)
+                            miEscena3.cambio_esenario
+                            miTanque.batallaJugador
+                            descanso
+            
+                        caso 2: 
+                            Escribir "|||USANDO AVION|||"
+                            Escribir "VIDA: " + LosEnemigos.HPJugador
+                            Escribir "PUNTOS DE PODER: " + miAvion.PP)
+                            Escribir "NIVEL: " + miAvion.nivel)
+                            miEscena1.cambio_esenario
+                            miTanque.batallaJugador
+
+                            descanso
+            
+                        defecto:
+                            Escribir "SOLO PUEDES USAR TANQUE O AVION"
+                    
+                        LosEnemigos.batallaEnemigo
+        
+                
+                        Escribir "|||TE HAN MATADO, HAS PERDIDO|||"
+                        descanso
+                    case 4:
+                       mientras(HPJugador > 0)
+                            Escribir "ESCENARIO SELECCIONADO: "
+                            crar1.cambio_esenario
+                            Escribir "\n¿QUE VEHICULO QUIERES USAR " + nombre + "?"
+                            Escribir "1. TANQUE\n2. AVION"
+                            leer(vehiculo)
+                    
+                    cambio(vehiculo)
+                        caso 1:
+                            Escribir "|||USANDO TANQUE|||"
+                            Escribir "VIDA: " + LosEnemigos.HPJugador
+                            Escribir "PUNTOS DE PODER: " + miTanque.PP)
+                            Escribir "NIVEL: " + miTanque.nivel)
+                            crear1.cambio_esenario
+                            miTanque.batallaJugador
+                            descanso
+            
+                        caso 2: 
+                            Escribir "|||USANDO AVION|||"
+                            Escribir "VIDA: " + LosEnemigos.HPJugador
+                            Escribir "PUNTOS DE PODER: " + miAvion.PP)
+                            Escribir "NIVEL: " + miAvion.nivel)
+                            crear.cambio_esenario
+                            miTanque.batallaJugador
+
+                            descanso
+            
+                        defecto:
+                            Escribir "SOLO PUEDES USAR TANQUE O AVION"
+                    
+                        LosEnemigos.batallaEnemigo
+        
+                
+                        Escribir "|||TE HAN MATADO, HAS PERDIDO|||"
+                        descanso
+                    case 5:
+                       mientras(HPJugador > 0)
+                            Escribir "ESCENARIO SELECCIONADO: "
+                            crear2.cambio_esenario
+                            Escribir "\n¿QUE VEHICULO QUIERES USAR " + nombre + "?"
+                            Escribir "1. TANQUE\n2. AVION"
+                            leer(vehiculo)
+                    
+                    cambio(vehiculo)
+                        caso 1:
+                            Escribir "|||USANDO TANQUE|||"
+                            Escribir "VIDA: " + LosEnemigos.HPJugador
+                            Escribir "PUNTOS DE PODER: " + miTanque.PP)
+                            Escribir "NIVEL: " + miTanque.nivel)
+                            crear2.cambio_esenario
+                            miTanque.batallaJugador
+                            descanso
+            
+                        caso 2: 
+                            Escribir "|||USANDO AVION|||"
+                            Escribir "VIDA: " + LosEnemigos.HPJugador
+                            Escribir "PUNTOS DE PODER: " + miAvion.PP)
+                            Escribir "NIVEL: " + miAvion.nivel)
+                            crear2.cambio_esenario
+                            miTanque.batallaJugador
+
+                            descanso
+            
+                        defecto:
+                            Escribir "SOLO PUEDES USAR TANQUE O AVION"
+                    
+                        LosEnemigos.batallaEnemigo
+        
+                
+                        Escribir "|||TE HAN MATADO, HAS PERDIDO|||"
+                        descanso
+                    defecto
+                        descanso
+                
+               descanso
+            caso 2:
+                Escribir "|||CREAR ESENARIO 1|||"
+                crear1.cambio_esenario
+                crear1.eleccion_campo
+                descanso
+            caso 3:
+                Escribir "|||CREAR ESENARIO 2|||"
+                crear2.cambio_esenario
+                crear2.eleccion_campo
+                descanso
+            caso 4:
+                Escribir "|||ESENARIOS CREADOS|||"
+                Escribir "***ESCENARIOS PREDETERMINADOS***"
+                datos.verTodo
+                Escribir "\n***ESCENARIOS CREADOS POR EL JUGADOR***"
+                crear1.cambio_esenario
+                crear2.cambio_esenario
+                descanso
+            caso 5:
+                Escribir "|||TIENDA DEL JUEGO|||"
+                Escribir "***VER ARMAS DISPONIBLES PARA OBTENER***"
+                Escribir "1: PRIMER ARMA \n2: SEGUNDA ARMA \n3: TERCER ARMA"
+                leer(opcion)
+                cambio(opcion){
+                    caso 1:
+                        miArma1.Caracteristicas
+                        Escribir "1: EQUIPAR \n2: SALIR"
+                        leer (opcion)
+                        cambio(opcion)
+                            caso 1:
+                                Escribir "¡¡¡LO HAS EQUIPADO!!!"
+                                descanso
+                            caso 2:
+                                descanso
+
+                    caso 2:
+                        miArma2.Caracteristicas
+                        Escribir "1: EQUIPAR \n2: SALIR"
+                        leer (opcion)
+                        cambio(opcion)
+                            caso 1:
+                                Escribir "¡¡¡LO HAS EQUIPADO!!!"
+                                descanso
+                            caso 2:
+                                descanso
+                        descanso
+                    caso 3:
+                        miArma3.Caracteristicas
+                        Escribir "1: EQUIPAR \n2: SALIR"
+                        leer (opcion)
+                        cambio(opcion)
+                            caso 1:
+                                Escribir "¡¡¡LO HAS EQUIPADO!!!"
+                                descanso
+                            caso 2:
+                                descanso
+                        descanso
+                descanso
+            caso 6:
+                Escribir "|||LISTADO DE VEHICULOS E IDENTIFICADOR|||"
+                miListado.Listado
+                descanso
+            caso 7:
+                Escribir "|||REPORTE DEL MEJOR VEHICULO|||"
+                miMejor.MejorVehi
+                descanso
+            caso 8:
+                Escribir "|||REPORTE DEL PEOR VEHICULO|||"
+                miMejor.PeorVehi
+                descanso
+            caso 9:
+                Escribir "|||REPORTE DE BATALLAS|||"
+                miMejor.RepBatalla
+                descanso
+            caso 10:
+                Escribir salir (0)
+                descanso
+
+            Escribir "\n¿QUIERES SEGUIR?\n***PRESIONA S PARA REGRESAR AL MENÚ***\n"
+            leer (tecla)
+        mientras(tecla igual a s || tecla igual a S)  
+        regresar al menu
+
+Fin

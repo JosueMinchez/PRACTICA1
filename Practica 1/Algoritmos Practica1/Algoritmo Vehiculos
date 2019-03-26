@@ -1,0 +1,88 @@
+Inicio
+    var HPEnemigo1 = HPEnemigos1
+    var HPEnemigo2 = HPEnemigos2
+    var HPEnemigo3 = HPEnemigos3
+    var HPJugador = HPJugador
+
+    publico abstracto vacio ArmaBasica
+    publico abstracto vacio batallaJugador
+    
+    publico entero ataque
+        var daño = 8 + (2 * nivel) 
+        
+        retornar daño
+        
+
+    publico entero HPJugador
+
+        var nivel = nivel
+        si(nivel >= 1)
+            retorno HPJugador = nivel * 100
+            
+        
+        retorno HPJugador;     
+
+    publico entero PP
+        var nivel = nivel
+        var PP = 3
+        if(nivel >= 1)
+            retorno PP = PP + (2 * nivel)
+            
+            retorno PP
+
+    publico entero nivel
+        var nivel
+        var XP =XP
+        si(XP >= 0 && XP < 100)
+            retorno nivel = 1
+        entonces si(XP >= 100 && XP < 200)
+          retorno nivel = 2
+        entonces si(XP >= 200 && XP < 350)
+            retorno nivel = 3
+       entonces si(XP >= 350 && XP < 500)
+            retorno nivel = 4
+        entonces si(XP >= 500 && XP < 750)
+            retorno nivel = 5
+        entonces si(XP >= 750 && XP < 900)
+            retorno nivel = 6
+        entonces si(XP >= 900 && XP < 1050)
+            retorno nivel = 7
+        entonces
+        retorno 0
+        
+    publico entero XP
+        var partidaGanada = 100
+        var XP = 0
+        
+        XP = XP + partidaGanada
+        retorno XP
+        
+    publico entero HPEnemigos1
+        var nivel = nivel
+        si(nivel >= 1)
+            retorno HPEnemigo1 = nivel * 50
+            
+        entonces
+        
+        retorno HPEnemigo1
+
+    publico entero HPEnemigos2
+        var nivel = nivel
+        if(nivel >= 1)
+            retorno HPEnemigo2 = nivel * 50
+            
+        entonces
+        
+        retorno HPEnemigo2
+
+    publico entero HPEnemigos3
+        var nivel = nivel
+        si(nivel >= 1)
+            retorno HPEnemigo3 = nivel * 50
+            
+        entonces
+        
+        retorno HPEnemigo3
+	finsi
+Fin
+

@@ -1,0 +1,11 @@
+    publico entero Daño
+        var daño = 13;
+        
+        retonar daño;
+
+    publico vacio Caracteristicas
+        Escribir "#CARACTERISTICAS#"
+        Escribir "NOMBRE DEL ARMA: LANZA GRANADAS"
+        Escribir "DAÑO QUE PROVOCA: " + Daño
+        Escribir "PROBABILIDAD DE DAÑO: 60%"
+    

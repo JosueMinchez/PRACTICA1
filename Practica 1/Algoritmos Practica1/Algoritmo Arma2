@@ -1,0 +1,11 @@
+    publico entero Daño
+        var daño = 15;
+        
+        retornar daño;
+
+    publico vacio Caracteristicas
+        Escribir "#CARACTERISTICAS#"
+        Escribir "NOMBRE DEL ARMA: LANZA COHETES TELEDIRIGIDO"
+        Escribir "DAÑO QUE PROVOCA: " + Daño
+        Escribir "PROBABILIDAD DE DAÑO: 65%"
+    

@@ -1,0 +1,26 @@
+Inicio
+
+    Escenario [] guarda = nuevo Escenario[6]
+    Escenario e1= nuevo Escena1
+    Escenario e2= nuevo Escena2
+    Escenario e3= nuevo Escena3
+    var num=3;
+    publico DatosEscena
+        guarda[0] = e1
+        guarda[1] = e2
+        guarda[2] = e3
+    
+    
+    publico vacio Crear
+        
+        guarda[num]=nuevo CrearEscena1
+        guarda[num].limpiar_esenario
+        guarda[num].eleccion_campo
+        num=num+1;
+    
+    publico vacio verTodo
+        para (var i=0;i<num;i++){
+            guarda[i].cambio_esenario
+	finpara
+Fin
+ 

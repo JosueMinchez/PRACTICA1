@@ -1,0 +1,10 @@
+    publico Escenario
+       
+    var[][] esena = nueva cuerda[6][6]
+
+    var [][] esenac = nuevo var[6][6];
+    abstracto publico vacio cambio_esenario
+    abstracto publico vacio ver_esenario
+    abstracto publico vacio limpiar_esenario
+    abstracto publico vacio eleccion_campo
+  

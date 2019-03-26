@@ -1,0 +1,116 @@
+Inicio
+	DatosEnemigo sim= nuevo DatosEnemigo
+	enviar=nuevo datos
+    var privada [][] esena0 = nuevo var[6][6];
+    CrearEsena [] guarda = nuevo CrearEsena[6];
+
+
+    publico vacio cambio_esenario
+        para (var i = 0; i < 6; i++) 
+            para (var j = 0; j < 6; j++) 
+                cambio (esenac[i][j]) 
+                    caso 0:
+                        // vacio
+                        esena[i][j] = "\033[37m████▉";
+                        descansar
+                    caso 1:
+                        // agua
+                        esena[i][j] = "\033[34m████▉";
+                        descansar
+                    caso 2:
+                        // montanya
+                        esena[i][j] = "\033[31m████▉";
+                       descansar
+                    caso 3:
+                        //terreno
+                        esena[i][j] = "\033[32m████▉";
+                        descansar
+                    caso 4:
+                        //enemigo1
+                        esena[i][j] = "\033[32m██" + "\033[30m"+1+ "\033[32m█▉";
+                        descansar
+                    caso 5:
+                        //enemigo2
+                        esena[i][j] = "\033[32m██" + "\033[30m"+2+ "\033[32m█▉";
+                        descansar
+                    caso 6:
+                        //enemigo3
+                        esena[i][j] = "\033[32m██" + "\033[30m"+3+ "\033[32m█▉";
+                        descansar
+                    caso 7:
+                        //vehiculo
+                        esena[i][j] = "\033[32m██" + "\033[30m=" + "\033[32m█▉";
+                        descansar
+                    caso 8:
+                        //vehiculo
+                        esena[i][j] = "\033[34m██" + "\033[30m=" + "\033[34m█▉";
+                        descansar
+                    defecto
+                
+                esena0[i][j]=esenac[i][j]
+            
+        
+        ver_esenario
+    
+
+    publico vacio ver_esenario
+        // numero de filas
+        para (var i = 0; i < 6; i++) 
+            Esribir "\033[30m    "+(i+1)
+        
+        //nuero de columnas casillas
+        para (var i = 0; i < 6; i++) 
+            Esribir ""
+            Esribir "\033[30m"+(i+1)+" "
+            //casilla por casilla
+            para (int j = 0; j < 6; j++) 
+
+                Esribir esena[i][j]
+            Esribir " \033[30m"+(i+1)+" "
+        
+        Esribir ""
+        para (var i = 0; i < 6; i++) 
+            Esribir "\033[30m    "+(i+1)
+
+
+    publico vacio limpiar_esenario
+        para (var i = 0; i < 6; i++) 
+            para (var j = 0; j < 6; j++) 
+                esenac[i][j]= 3
+
+        cambio_esenario
+
+    publico vacio eleccion_campo
+        var campo=4
+        mientras (campo!=0){
+            var columna, fila;
+            Esribir "\nElige Columna:"
+            leer(columna)
+            Esribir "Fila"
+            leer(filas)
+            Esribir "Que tipo de campo quieres en esa casilla \n1:Agua \n2:Montana"
+            Esribir "3: para terminar"
+            leer(campos)
+            cambio (campo)
+                caso 1:
+                    esenac[fila-1][columna-1]=1
+                    descansar
+                caso 2:
+                    esenac[fila-1][columna-1]=2
+                    descansar
+                caso 3 :
+                    campo=0
+                    descansar
+            
+            cambio_esenario
+
+        
+        opcion
+    publico vacio opcion
+        Esribir "\n1: Terminar"
+        leer(opcion)
+        cambio (opcion)
+            caso 1:
+                break;
+
+Fin

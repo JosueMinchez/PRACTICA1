@@ -1,0 +1,56 @@
+Inicio
+var HPJugador = HPJugador
+    
+    publico abstracto vacio batallaEnemigo
+    
+    publico entero ataque
+        var daño = 4 + nivel
+        
+        retornar daño
+
+    publico entero HPEnemigos
+        var nivel = nivel
+        var HPEnemigo = 50
+        si(nivel >= 1)
+            retornar HPEnemigo = nivel * 50
+            
+        entonces
+        
+        retornar HPEnemigo
+
+    publico entero nivel
+        var nivel;
+        var XP =XP
+        si(XP >= 0 y XP < 100)
+            retornar nivel = 1
+        entonce si (XP >= 100 && XP < 200)
+          retorno nivel = 2
+        entonces si (XP >= 200 && XP < 350)
+            retornar nivel = 3
+        entonces si(XP >= 350 && XP < 500)
+            retornar nivel = 4
+        entonces si(XP >= 500 && XP < 750)
+            retornar nivel = 5
+        entonces si(XP >= 750 && XP < 900)
+           retornar nivel = 6
+        entonces si(XP >= 900 && XP < 1050)
+            retornar nivel = 7
+        entonces
+        retornar 0;
+ 
+    publico entero XP
+        var partidaGanada = 100
+        var XP = 0
+        
+        XP = XP + partidaGanada
+        retornar XP;
+        
+    
+    publico entero HPJugador
+        var nivel = nivel
+        si(nivel >= 1)
+            retorno HPJugador = nivel * 100
+            
+        
+        retorno HPJugador;
+ Fin

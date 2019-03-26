@@ -1,0 +1,145 @@
+Inicio
+    DatosEscena enviar=nuevo DatosEscena
+    var [][] esena0 = nuevo var[6][6];
+    CrearEscena1 [] guarda = nuevo CrearEscena1[6]
+    var privada CrearEscena1[][] =
+            
+                    {3, 3, 3, 3, 3, 3,},
+                    {3, 3, 3, 3, 3, 3,},
+                    {3, 3, 3, 3, 3, 3,},
+                    {3, 3, 3, 3, 3, 3,},
+                    {3, 3, 3, 3, 3, 3,},
+                    {3, 3, 3, 3, 3, 3,}
+            
+
+    publico CrearEscena1
+        para (var i = 0; i < 6; i++) 
+            para (var j = 0; j < 6; j++) 
+                esenac[i][j] = CrearEscena1[i][j]
+	    finpara
+	finpara
+	    
+  
+    publico vacio cambio_esenario
+        para (int i = 0; i < 6; i++) 
+            para (int j = 0; j < 6; j++) 
+                cambio (esenac[i][j]) 
+                    caso 0:
+                        // vacio
+                        esena[i][j] = "\033[37m████▉";
+                        descansar
+                    caso 1:
+                        // agua
+                        esena[i][j] = "\033[34m████▉";
+                        descansar
+                    caso 2:
+                        // montanya
+                        esena[i][j] = "\033[31m████▉";
+                        descansar
+                    caso 3:
+                        //terreno
+                        esena[i][j] = "\033[32m████▉";
+                        descansar
+                    caso 4:
+                        //PRIMER ENEMIGO
+                        esena[i][j] = "\033[32m██" + "\033[30m"+("1")+ "\033[32m█▉";
+                        descansar
+                    caso 5:
+                        //SEGUNDO ENEMIGO
+                        esena[i][j] = "\033[32m██" + "\033[30m"+("2")+ "\033[32m█▉";
+                        descansar
+                    caso 6:
+                        //TERCER ENEMIGO
+                        esena[i][j] = "\033[32m██" + "\033[30m"+("3")+ "\033[32m█▉";
+                        descansar
+                    caso 7:
+                         //TANQUE
+                        esena[i][j] = "\033[32m██" + "\033[30mT" + "\033[32m█▉";
+                        descansar
+                    caso 8:
+                        //AVION
+                        esena[i][j] = "\033[32m██" + "\033[30mA" + "\033[32m█▉";
+                        descansar
+                    defecto
+        ver_esenario
+		finpara
+	finpara
+
+    publico vacio ver_esenario
+        // numero de filas
+        para (var i = 0; i < 6; i++) 
+            Esribir "\033[30m    "+(i+1)
+        //nuero de columnas casillas
+        para (var i = 0; i < 6; i++) 
+            Esribir ""
+            Esribir "\033[30m"+(i+1)+" "
+            //casilla por casilla
+            para (var j = 0; j < 6; j++) 
+
+                Esribir "esena[i][j]
+            
+            Esribir " \033[30m"+(i+1)+" "
+		finpara
+	finpara
+        
+        Esribir "");
+        para (int i = 0; i < 6; i++) 
+            Esribir "\033[30m    "+(i+1)
+	finpara	
+
+    public0 vacio limpiar_esenario
+        para (var i = 0; i < 6; i++) 
+            para (int j = 0; j < 6; j++) 
+                esenac[i][j]= 3;
+
+        cambio_esenario();
+
+		finpara
+	finpara
+    publico vacio eleccion_campo
+        var campo=4
+        entonces (campo!=0)
+            var columna, fila;
+            Esribir "\nElige Columna:"
+            leer (columna)
+            Esribir "Fila"
+            leer (fila)
+            Esribir "Que tipo de campo o vehiculo quieres en esa casilla \n1: Agua \n2: Montana \n3: Tanque \n4: Avión \n5: Primer Enemigo \n6: Segundo Enemigo \n7: Tercer Enemigo \n8: Terminar"
+            leer (campo)
+            cambio (campo){
+                caso 1:
+                    esenac[fila-1][columna-1]=1;
+                    descansar
+                caso 2:
+                    esenac[fila-1][columna-1]=2;
+                    descansar
+                caso 3:
+                     esenac[fila-1][columna-1]=7;
+                    descansar
+                caso 4:
+                     esenac[fila-1][columna-1]=8;
+                    descansar
+                caso 5:
+                    esenac[fila-1][columna-1]=4;
+                    descansar
+                caso 6:
+                    esenac[fila-1][columna-1]=5;
+                    descansar
+                caso 7:
+                    esenac[fila-1][columna-1]=6;
+                    descansar
+                caso 8 :
+                    campo=0;
+                    descansar
+            
+            cambio_esenario
+       
+        opcion
+    
+    publico vacio opcion
+        Esribir "\n1: Terminar"
+        leer(opcion)
+        cambio (opcion){
+            caso 1:
+                descansar
+Fin

@@ -1,0 +1,15 @@
+Inicio
+
+    publico vacio MejorVehi
+        Escribir "EL MEJOR VEHICULO ES: "
+        Escribir "|_AVION_|\nEste vehiculo puede volar y\npara el no es obstaculo el agua.\nTiene movimiento especial que daña a todos los enemigos"
+    
+    publico vacio PeorVehi
+        Escribir "EL PEOR VEHICULO ES: "
+        Escribir "|_TANQUE_|\nEste vehiculo no puede pasar sobre el agua\npuede destruir montañas pero unicamente\ncuando le dispara 2 veces para destruirlo"
+    
+    publico vacio RepBatalla
+        Escribir "La probabilidad de que el Jugador gane es muy baja\nsolo con una buena estrategia podra derrotar al enemigo.\nSi el jugador pierde no se le dara experiencia,\nse le dara unicamente cuando gane"
+        Escribir "EL ENEMIGO TENDRA MAYOR PROBABILIDAD DE GANAR\nASI QUE PIENSA BIEN TU ESTRATEGIA"
+    
+Fin

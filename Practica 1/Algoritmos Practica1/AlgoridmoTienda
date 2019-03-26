@@ -1,0 +1,7 @@
+ Tienda publica()
+        
+    
+   publico abstracto entero Daño();
+   publico abstracto vacio Caracteristicas();
+    
+

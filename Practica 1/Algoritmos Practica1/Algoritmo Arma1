@@ -1,0 +1,16 @@
+ Arma1 publica
+        
+    
+
+    publico entero Daño 
+        var daño = 10
+        
+        retornar daño;
+    
+
+    publico vacio Caracteristicas 
+        Esribir "#CARACTERISTICAS#"
+        Esribir "NOMBRE DEL ARMA: CAÑON"
+        Esribir "DAÑO QUE PROVOCA: " + Daño"
+        Esribir "PROBABILIDAD DE DAÑO: 50%""
+    

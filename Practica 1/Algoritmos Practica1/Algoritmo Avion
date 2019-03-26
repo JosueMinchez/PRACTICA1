@@ -1,0 +1,532 @@
+Inicio 
+    publico doble defensa
+        doble escudo = 0.05 + (0.01 * nivel()
+        doble vida = HPJugador() - (HPJugador() * escudo
+        retornar vida
+        
+    
+    publico vacio punteriaTanque1
+       doble probabilidad= probabilidad
+        doble punteria = 40.5 - (nivel() * 0.5
+        si(probabilidad > punteria && HPEnemigo1 > 0)
+            Escribir "HAS HECHO DAÑO: "+ ataque
+            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo1 - ataque)
+            HPEnemigo1 = HPEnemigo1 - ataque
+        entonces
+            Escribir "||||FALLASTE EL DISPARO O EL PRIMER ENEMIGO YA NO TIENE VIDA Y LO HAS ELIMINADO||||"
+            Escribir "VIDA DEL ENEMIGO: " + HPEnemigo1
+
+    
+    publico vacio punteriaTanque2
+       doble probabilidad= probabilidad
+        doble punteria = 40.5 - (nivel() * 0.5
+        si(probabilidad > punteria && HPEnemigo2 > 0)
+            Escribir "HAS HECHO DAÑO: "+ ataque
+            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo2 - ataque)
+            HPEnemigo2 = HPEnemigo2 - ataque();
+
+        entonces
+            Escribir "||||FALLASTE EL DISPARO O EL SEGUNDO ENEMIGO YA NO TIENE VIDA Y LO HAS ELIMINADO||||"
+            Escribir "VIDA DEL ENEMIGO: " + HPEnemigo2
+
+    publico vacio punteriaTanque3
+       doble probabilidad= probabilidad
+        doble punteria = 40.5 - (nivel() * 0.5
+        si(probabilidad > punteria && HPEnemigo3 > 0)
+            Escribir "HAS HECHO DAÑO: "+ ataque)
+            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo3 - ataque)
+            HPEnemigo3 = HPEnemigo3 - ataque();
+
+        entonces
+            Escribir "||||FALLASTE EL DISPARO O EL TERCER ENEMIGO YA NO TIENE VIDA Y LO HAS ELIMINADO||||"
+            Escribir "VIDA DEL ENEMIGO: " + HPEnemigo3
+
+
+    publico entero movimientoEspecial
+        var movimientoEspecial = ataque() * 2
+        retornar movimientoEspecial
+        
+    
+
+    publico vacio ArmaBasica
+                //JUGADOR USA TANQUE
+                Escribir "\n¿QUE ARMA VAS A ESCOGER?"
+                Escribir "1. TORRETA\n2. LANZA COHETES\n3. GRANADAS PEGAJOSAS\n|||ARMA 4, 5 Y 6 ESTAN DISPONIBLES COMPRANDOLAS EN LA TIENDA|||\n4. CAÑON\n5. LANZA COHETES TELEDIRIGIDO\n6. LANZA GRANADA"
+
+    
+    publico vacio batallaJugador
+        var opciones
+        var armasBasicas
+        ArmaBasica
+        leer(ArmaBasica)
+        cambio(armasBasicas)
+            caso 1: 
+                //JUGADOR USA TORRETA
+                Escribir "|||TORRETA|||"
+                Escribir "¿QUE DESEAS HACER?"
+                Escribir "1. ATACAR\n2. MOVIMIENTO ESPECIAL\n3. RENDIRSE"
+                leer (opciones)
+                
+        cambio (opciones) 
+            caso 1:
+                //JUGADOR SELECCIONA A QUIEN ATACAR
+                Escribir "¿A QUIÉN QUIERES ATACAR?"
+                Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                leer(opciones)
+                cambio(opciones)
+                    caso 1: 
+                        Escribir "|||ATACAS AL PRIMER ENEMIGO|||");
+                        punteriaTanque1
+
+                        descanso
+                    caso 2:
+                        Escribir "|||ATACAS AL SEGUNDO ENEMIGO|||"
+                        punteriaTanque2
+                        descanso
+                        
+                    caso 3:
+                        Escribir "|||ATACAS AL TERCER ENEMIGO|||"
+                        punteriaTanque3
+                        descanso
+                    defecto
+                        Escribir "UPPS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2, Y 3."
+                        descanso
+                    
+                descanso
+            caso 2:
+                if(PP() >= 4)
+                    //JUGADOR SELECCIONA A QUIEN ATACAR CON MOVIMIENTO ESPECIAL
+                    Escribir "¿A QUIEN QUIERES ATACAR?"
+                    Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                    leer(opciones)
+                    cambio(opciones){
+                        caso 1: 
+                            if(HPEnemigo1 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL PRIMER ENEMIGO: " + movimientoEspecial
+                            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo1 - movimientoEspecial
+                            HPEnemigo1 = HPEnemigo1 - movimientoEspecial
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL PRIMER ENEMIGO|*****|"
+                            descanso
+                        caso 2:
+                            si(HPEnemigo2 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL SEGUNDO ENEMIGO: " + movimientoEspecial
+                            SEscribir "VIDA DEL ENEMIGO: " + (HPEnemigo2 - movimientoEspecial                         HPEnemigo2 = HPEnemigo2 - movimientoEspecial
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL SEGUNDO ENEMIGO|*****|"
+                            descanso
+                        caso 3:
+                            si(HPEnemigo3 > 0)
+                           Escribir "LE HAS HECHO DAÑO AL TERCER ENEMIGO: " + movimientoEspecial
+                           Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo3 - movimientoEspecial
+                           HPEnemigo3 = HPEnemigo3 - movimientoEspecial
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL TERCER ENEMIGO|*****|"
+                            descanso
+                        defecto
+                            Escribir "UPSS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2 , 3"
+                            descanso
+               
+                        entonces
+                            Escribir "No tienes suficiente PP"
+                  descanso
+            caso 3:
+                Escribir "|||***TE HAS RENDIDO***|||"
+                resetear main
+                descanso
+            defecto
+                Escribir "Has seleccionado una opcion incorrecta"
+                descanso
+            descanso
+            caso 2:
+                //JUGADOR USA LANZA COHETES
+                Escribir "|||LANZA COHETES|||"
+                Escribir "¿QUE DESEAS HACER?"
+                Escribir 1. ATACAR\n2. MOVIMIENTO ESPECIAL\n3. RENDIRSE"
+                leer(opciones)
+                cambio(opciones){
+                    caso 1:
+                        //JUGADOR SELECCIONA A QUIEN ATACAR
+                        Escribir ¿A QUIÉN QUIERES ATACAR?"
+                        Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                        leer(opciones)
+                        cambio(opciones)
+                            caso 1: 
+                        Escribir "|||ATACAS AL PRIMER ENEMIGO|||"
+                        punteriaTanque1
+                        descanso
+                    caso 2:
+                        Escribir "|||ATACAS AL SEGUNDO ENEMIGO|||"
+                        punteriaTanque2(
+                        descanso
+                        
+                    caso 3:
+                        Escribir "|||ATACAS AL TERCER ENEMIGO|||"
+                        punteriaTanque3
+                        descanso
+                    defecto:
+                        Escribir "UPPS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2, Y 3."
+                        descanso
+                        }
+                        break;
+                    caso 2:
+                         if(PP() >= 4)
+                    //JUGADOR SELECCIONA A QUIEN ATACAR CON MOVIMIENTO ESPECIAL
+                    Escribir "¿A QUIEN QUIERES ATACAR?"
+                    Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                    leer(opciones)
+                    cambio(opciones)
+                        caso 1: 
+                            si(HPEnemigo1 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL PRIMER ENEMIGO: " + movimientoEspecial
+                            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo1 - movimientoEspecial
+                            HPEnemigo1 = HPEnemigo1 - movimientoEspecial
+                            entonces
+                               Escribir "|*****|HAS ELIMINADO AL PRIMER ENEMIGO|*****|"
+                            descanso
+                        caso 2:
+                            si(HPEnemigo1 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL SEGUNDO ENEMIGO: " + movimientoEspecial
+                            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo2 - movimientoEspecial
+                            HPEnemigo2 = HPEnemigo2 - movimientoEspecia
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL SEGUNDO ENEMIGO|*****|"
+                            descanso
+                        caso 3:
+                            si(HPEnemigo1 > 0)
+                           Escribir "LE HAS HECHO DAÑO AL TERCER ENEMIGO: " + movimientoEspecial
+                           Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo3 - movimientoEspecial
+                           HPEnemigo3 = HPEnemigo3 - movimientoEspecial
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL TERCER ENEMIGO|*****|"
+                           descanso
+                        defecto:
+                            Escribir "UPSS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2 , 3"
+                            descanso
+               
+                        entonces
+                            Escribir "No tienes suficiente PP"
+                    	descanso
+                         caso 3:
+                            Escribir "|||***TE HAS RENDIDO***|||"
+                            reiniciar man
+                descanso
+            defecto:
+                Escribir "Has seleccionado una opcion incorrecta"
+                descanso
+            descanso
+                    caso 3:
+                         //JUGADOR USA GRANADA PEGAJOSA
+                Escribir "|||GRANADA PEGAJOSA|||"
+                Escribir "¿QUE DESEAS HACER?"
+                Escribir 1. ATACAR\n2. MOVIMIENTO ESPECIAL\n3. RENDIRSE"
+                leer(opciones)
+                cambio(opciones){
+                    caso 1:
+                        //JUGADOR SELECCIONA A QUIEN ATACAR
+                        Escribir ¿A QUIÉN QUIERES ATACAR?"
+                        Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                        leer(opciones)
+                        cambio(opciones)
+                            caso 1: 
+                        Escribir "|||ATACAS AL PRIMER ENEMIGO|||"
+                        punteriaTanque1
+                        descanso
+                    caso 2:
+                        Escribir "|||ATACAS AL SEGUNDO ENEMIGO|||"
+                        punteriaTanque2(
+                        descanso
+                        
+                    caso 3:
+                        Escribir "|||ATACAS AL TERCER ENEMIGO|||"
+                        punteriaTanque3
+                        descanso
+                    defecto:
+                        Escribir "UPPS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2, Y 3."
+                        descanso
+                        }
+                        break;
+                    caso 2:
+                         if(PP() >= 4)
+                    //JUGADOR SELECCIONA A QUIEN ATACAR CON MOVIMIENTO ESPECIAL
+                    Escribir "¿A QUIEN QUIERES ATACAR?"
+                    Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                    leer(opciones)
+                    cambio(opciones)
+                        caso 1: 
+                            si(HPEnemigo1 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL PRIMER ENEMIGO: " + movimientoEspecial
+                            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo1 - movimientoEspecial
+                            HPEnemigo1 = HPEnemigo1 - movimientoEspecial
+                            entonces
+                               Escribir "|*****|HAS ELIMINADO AL PRIMER ENEMIGO|*****|"
+                            descanso
+                        caso 2:
+                            si(HPEnemigo1 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL SEGUNDO ENEMIGO: " + movimientoEspecial
+                            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo2 - movimientoEspecial
+                            HPEnemigo2 = HPEnemigo2 - movimientoEspecia
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL SEGUNDO ENEMIGO|*****|"
+                            descanso
+                        caso 3:
+                            si(HPEnemigo1 > 0)
+                           Escribir "LE HAS HECHO DAÑO AL TERCER ENEMIGO: " + movimientoEspecial
+                           Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo3 - movimientoEspecial
+                           HPEnemigo3 = HPEnemigo3 - movimientoEspecial
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL TERCER ENEMIGO|*****|"
+                           descanso
+                        defecto:
+                            Escribir "UPSS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2 , 3"
+                            descanso
+               
+                        entonces
+                            Escribir "No tienes suficiente PP"
+                    	descanso
+                         caso 3:
+                            Escribir "|||***TE HAS RENDIDO***|||"
+                            reiniciar man
+                descanso
+            defecto:
+                Escribir "Has seleccionado una opcion incorrecta"
+                descanso
+            descanso
+                        break;  
+                    case 4:
+                        //JUGADOR USA CAÑON
+                Escribir "|||CAÑON|||"
+                Escribir "¿QUE DESEAS HACER?"
+                Escribir 1. ATACAR\n2. MOVIMIENTO ESPECIAL\n3. RENDIRSE"
+                leer(opciones)
+                cambio(opciones){
+                    caso 1:
+                        //JUGADOR SELECCIONA A QUIEN ATACAR
+                        Escribir ¿A QUIÉN QUIERES ATACAR?"
+                        Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                        leer(opciones)
+                        cambio(opciones)
+                            caso 1: 
+                        Escribir "|||ATACAS AL PRIMER ENEMIGO|||"
+                        punteriaTanque1
+                        descanso
+                    caso 2:
+                        Escribir "|||ATACAS AL SEGUNDO ENEMIGO|||"
+                        punteriaTanque2(
+                        descanso
+                        
+                    caso 3:
+                        Escribir "|||ATACAS AL TERCER ENEMIGO|||"
+                        punteriaTanque3
+                        descanso
+                    defecto:
+                        Escribir "UPPS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2, Y 3."
+                        descanso
+                        }
+                        break;
+                    caso 2:
+                         if(PP() >= 4)
+                    //JUGADOR SELECCIONA A QUIEN ATACAR CON MOVIMIENTO ESPECIAL
+                    Escribir "¿A QUIEN QUIERES ATACAR?"
+                    Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                    leer(opciones)
+                    cambio(opciones)
+                        caso 1: 
+                            si(HPEnemigo1 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL PRIMER ENEMIGO: " + movimientoEspecial
+                            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo1 - movimientoEspecial
+                            HPEnemigo1 = HPEnemigo1 - movimientoEspecial
+                            entonces
+                               Escribir "|*****|HAS ELIMINADO AL PRIMER ENEMIGO|*****|"
+                            descanso
+                        caso 2:
+                            si(HPEnemigo1 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL SEGUNDO ENEMIGO: " + movimientoEspecial
+                            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo2 - movimientoEspecial
+                            HPEnemigo2 = HPEnemigo2 - movimientoEspecia
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL SEGUNDO ENEMIGO|*****|"
+                            descanso
+                        caso 3:
+                            si(HPEnemigo1 > 0)
+                           Escribir "LE HAS HECHO DAÑO AL TERCER ENEMIGO: " + movimientoEspecial
+                           Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo3 - movimientoEspecial
+                           HPEnemigo3 = HPEnemigo3 - movimientoEspecial
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL TERCER ENEMIGO|*****|"
+                           descanso
+                        defecto:
+                            Escribir "UPSS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2 , 3"
+                            descanso
+               
+                        entonces
+                            Escribir "No tienes suficiente PP"
+                    	descanso
+                         caso 3:
+                            Escribir "|||***TE HAS RENDIDO***|||"
+                            reiniciar man
+                descanso
+            defecto:
+                Escribir "Has seleccionado una opcion incorrecta"
+                descanso
+            descanso
+                break;
+                }
+                        break;
+                    case 5:
+                        //JUGADOR USA LANZA COHETES TELEDIRIGIDO
+                Escribir "|||LANZA COHETES TELEDIRIGIDO|||"
+                Escribir "¿QUE DESEAS HACER?"
+                Escribir 1. ATACAR\n2. MOVIMIENTO ESPECIAL\n3. RENDIRSE"
+                leer(opciones)
+                cambio(opciones){
+                    caso 1:
+                        //JUGADOR SELECCIONA A QUIEN ATACAR
+                        Escribir ¿A QUIÉN QUIERES ATACAR?"
+                        Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                        leer(opciones)
+                        cambio(opciones)
+                            caso 1: 
+                        Escribir "|||ATACAS AL PRIMER ENEMIGO|||"
+                        punteriaTanque1
+                        descanso
+                    caso 2:
+                        Escribir "|||ATACAS AL SEGUNDO ENEMIGO|||"
+                        punteriaTanque2(
+                        descanso
+                        
+                    caso 3:
+                        Escribir "|||ATACAS AL TERCER ENEMIGO|||"
+                        punteriaTanque3
+                        descanso
+                    defecto:
+                        Escribir "UPPS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2, Y 3."
+                        descanso
+                        }
+                        break;
+                    caso 2:
+                         if(PP() >= 4)
+                    //JUGADOR SELECCIONA A QUIEN ATACAR CON MOVIMIENTO ESPECIAL
+                    Escribir "¿A QUIEN QUIERES ATACAR?"
+                    Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                    leer(opciones)
+                    cambio(opciones)
+                        caso 1: 
+                            si(HPEnemigo1 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL PRIMER ENEMIGO: " + movimientoEspecial
+                            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo1 - movimientoEspecial
+                            HPEnemigo1 = HPEnemigo1 - movimientoEspecial
+                            entonces
+                               Escribir "|*****|HAS ELIMINADO AL PRIMER ENEMIGO|*****|"
+                            descanso
+                        caso 2:
+                            si(HPEnemigo1 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL SEGUNDO ENEMIGO: " + movimientoEspecial
+                            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo2 - movimientoEspecial
+                            HPEnemigo2 = HPEnemigo2 - movimientoEspecia
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL SEGUNDO ENEMIGO|*****|"
+                            descanso
+                        caso 3:
+                            si(HPEnemigo1 > 0)
+                           Escribir "LE HAS HECHO DAÑO AL TERCER ENEMIGO: " + movimientoEspecial
+                           Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo3 - movimientoEspecial
+                           HPEnemigo3 = HPEnemigo3 - movimientoEspecial
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL TERCER ENEMIGO|*****|"
+                           descanso
+                        defecto:
+                            Escribir "UPSS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2 , 3"
+                            descanso
+               
+                        entonces
+                            Escribir "No tienes suficiente PP"
+                    	descanso
+                         caso 3:
+                            Escribir "|||***TE HAS RENDIDO***|||"
+                            reiniciar man
+                descanso
+            defecto:
+                Escribir "Has seleccionado una opcion incorrecta"
+                descanso
+            descanso
+                        break;
+                    case 6: 
+                         //JUGADOR USA LANZA GRANADA
+                Escribir "|||LANZA GRANADA|||"
+                Escribir "¿QUE DESEAS HACER?"
+                Escribir 1. ATACAR\n2. MOVIMIENTO ESPECIAL\n3. RENDIRSE"
+                leer(opciones)
+                cambio(opciones){
+                    caso 1:
+                        //JUGADOR SELECCIONA A QUIEN ATACAR
+                        Escribir ¿A QUIÉN QUIERES ATACAR?"
+                        Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                        leer(opciones)
+                        cambio(opciones)
+                            caso 1: 
+                        Escribir "|||ATACAS AL PRIMER ENEMIGO|||"
+                        punteriaTanque1
+                        descanso
+                    caso 2:
+                        Escribir "|||ATACAS AL SEGUNDO ENEMIGO|||"
+                        punteriaTanque2(
+                        descanso
+                        
+                    caso 3:
+                        Escribir "|||ATACAS AL TERCER ENEMIGO|||"
+                        punteriaTanque3
+                        descanso
+                    defecto:
+                        Escribir "UPPS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2, Y 3."
+                        descanso
+                        }
+                        break;
+                    caso 2:
+                         if(PP() >= 4)
+                    //JUGADOR SELECCIONA A QUIEN ATACAR CON MOVIMIENTO ESPECIAL
+                    Escribir "¿A QUIEN QUIERES ATACAR?"
+                    Escribir "1. PRIMER ENEMIGO\n2. SEGUNDO ENEMIGO\n3. TERCER ENEMIGO"
+                    leer(opciones)
+                    cambio(opciones)
+                        caso 1: 
+                            si(HPEnemigo1 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL PRIMER ENEMIGO: " + movimientoEspecial
+                            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo1 - movimientoEspecial
+                            HPEnemigo1 = HPEnemigo1 - movimientoEspecial
+                            entonces
+                               Escribir "|*****|HAS ELIMINADO AL PRIMER ENEMIGO|*****|"
+                            descanso
+                        caso 2:
+                            si(HPEnemigo1 > 0)
+                            Escribir "LE HAS HECHO DAÑO AL SEGUNDO ENEMIGO: " + movimientoEspecial
+                            Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo2 - movimientoEspecial
+                            HPEnemigo2 = HPEnemigo2 - movimientoEspecia
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL SEGUNDO ENEMIGO|*****|"
+                            descanso
+                        caso 3:
+                            si(HPEnemigo1 > 0)
+                           Escribir "LE HAS HECHO DAÑO AL TERCER ENEMIGO: " + movimientoEspecial
+                           Escribir "VIDA DEL ENEMIGO: " + (HPEnemigo3 - movimientoEspecial
+                           HPEnemigo3 = HPEnemigo3 - movimientoEspecial
+                            entonces
+                                Escribir "|*****|HAS ELIMINADO AL TERCER ENEMIGO|*****|"
+                           descanso
+                        defecto:
+                            Escribir "UPSS, SOLO PUEDES SELECCIONAR LA OPCION 1, 2 , 3"
+                            descanso
+               
+                        entonces
+                            Escribir "No tienes suficiente PP"
+                    	descanso
+                         caso 3:
+                            Escribir "|||***TE HAS RENDIDO***|||"
+                            reiniciar man
+                descanso
+            defecto:
+                Escribir "Has seleccionado una opcion incorrecta"
+                descanso
+            descanso
+
+Fin

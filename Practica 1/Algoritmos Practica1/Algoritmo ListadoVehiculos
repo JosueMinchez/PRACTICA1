@@ -1,0 +1,15 @@
+Inicio
+public0 ListadoVehiculos
+        
+   
+    publico vacio Listado
+        Escribir "***VEHICULOS DEL JUGADOR***"
+        Escribir "1. Tanque ---------- Se identifica con: T"
+        Escribir "2. Avion  ---------- Se identifica con: A"
+        Escribir "***VEHICULOS DEL ENEMIGO***"
+        Escribir "1. Vehiculo Primer Enemigo  ---- Se identifica con: 1"
+        Escribir "1. Vehiculo Segundo Enemigo ---- Se identifica con: 2"
+        Escribir "1. Vehiculo Tercer Enemigo  ---- Se identifica con: 3"
+    
+    
+Fin

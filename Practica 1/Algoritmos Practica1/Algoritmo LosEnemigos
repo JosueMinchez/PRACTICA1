@@ -1,0 +1,43 @@
+Inicio
+
+
+    publico vacio batallaEnemigo
+        var probabilidad= probabilidad
+        var torreta = 35
+        var opcion
+        Escribir "|||PRESIONA 1 PARA CONTINUAR CON EL JUEGO|||"
+        leer (opcion)
+        cambio(opcion)
+            caso 1:
+                
+                si(probabilidad >torreta)  
+                        Escribir "PRIMER ENEMIGO TE HA HECHO DAÑO CON UNA TORRETA : "+ ataque()
+                        Escribir "VIDA DEL JUGADOR: " + (HPJugador - ataque
+                        HPJugador = HPJugador - ataque();
+                        
+                     entonces
+                        Escribir "||||PRIMER ENEMIGO FALLO EL DISPARO||||"
+                        Escribir "VIDA DEL JUGADOR: " + HPJugador
+                    
+                si(probabilidad > torreta)
+                    Escribir "SEGUNDO ENEMIGO TE HA HECHO DAÑO CON LANZA COHETES : "+ ataque
+                    Escribir "VIDA DEL JUGADOR: " + (HPJugador - ataque
+                    HPJugador = HPJugador - ataque();
+                entonces
+                    Escribir "||||SEGUNDO ENEMIGO FALLO EL DISPARO||||"
+                    Escribir "VIDA DEL JUGADOR: " + HPJugador
+                
+                si(probabilidad > torreta)
+                    Escribir "TERCER ENEMIGO TE HA HECHO DAÑO CON GRANADA PEGAJOSA : "+ ataque
+                    Escribir "VIDA DEL JUGADOR: " + (HPJugador - ataque
+                    HPJugador = HPJugador - ataque();
+                entonces
+                    Escribir "||||TERCER ENEMIGO FALLO EL DISPARO||||"
+                   Escribir "VIDA DEL JUGADOR: " + HPJugador
+                
+                descnansar
+
+            defecto
+                Escribir "PRESIONA SOLO 1 PARA CONTINUAR CON EL JUEGO"
+            
+Fin
